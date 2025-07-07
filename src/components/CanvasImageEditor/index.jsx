@@ -73,11 +73,11 @@ function CanvasImageEditor (props) {
       ctx.fillStyle = "#5b3714";
       ctx.font = "20px 'Segoe Script', cursive";
   
-      let msgY = 280;
+      let msgY = 260;
       let fromY = 310;
   
       const dearLines = drawMultilineText(ctx, `Dear, ${dear}`, 90, 250, 300, 28);
-      msgY += dearLines * 28;
+      msgY += dearLines * 20;
   
       const messageLines = drawMultilineText(ctx, message, 90, msgY, 300, 28);
       fromY = msgY + messageLines * 28;
