@@ -1,0 +1,27 @@
+.button-container {
+  margin: 40px 0 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top: 2px solid #F0F0FA;
+  padding-top: 30px;
+}
+
+.button-container > button {
+  width: 200px;
+  height: 40px;
+  background-color: #55B464;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .button-container {
+    margin: 40px 0 90px 0;
+  }
+}

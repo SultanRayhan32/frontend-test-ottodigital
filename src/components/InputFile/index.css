@@ -1,0 +1,43 @@
+.custom-file-input-container {
+  display: inline-block; /* To contain the button */
+  width: 100%;
+}
+
+.custom-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-label-file {
+  font-weight: 100;
+  margin:10px 0;
+}
+
+.custom-file-upload-button {
+  width: 100%;
+  height: 120px;
+  border: 2px dashed #696969;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.custom-choose-file {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.custom-tutorial-file {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 100;
+  color : #696969;
+}
+
+@media only screen and (max-width: 600px) {
+  .custom-file-upload-button {
+    width: 100%;
+  }
+}
