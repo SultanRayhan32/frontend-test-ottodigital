@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './input.css'
 
 function Input (props) {
 
-  const {label,setter,value,maxLength} = props
+  const {label,setter,value,maxLength,buttonClick} = props
 
   const [errorMessage,setErrorMessage] = useState("")
 
@@ -16,6 +16,14 @@ function Input (props) {
     setter(limitedWords.join(" "));
     if (value.length === maxLength) setErrorMessage("Maksimal Limit Teks adalah " + maxLength + " kata")
   };
+
+  useEffect(()=>{
+    if (buttonClick && value === "") {
+      setErrorMessage(`Harap isi form ${label} ini`)
+    }else if (buttonClick && value !== "") {
+      setErrorMessage("")
+    } 
+  },[buttonClick,value])
 
   return (
     <div className="input-container">
@@ -33,6 +41,7 @@ function Input (props) {
           {errorMessage}
         </span>
       }
+      
     </div>
   )
 

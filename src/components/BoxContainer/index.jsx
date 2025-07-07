@@ -12,6 +12,7 @@ function BoxContainer () {
   const [message, setMessage] = useState("");
   const [from, setFrom] = useState("");
   const [imageFile, setImageFile] = useState(null);
+  const [buttonClick, setButtonClick] = useState(false)
 
   const canvasRef = useRef(null);
 
@@ -35,6 +36,7 @@ function BoxContainer () {
         label={"Dear"}
         maxLength={100}
         imageFile={imageFile}
+        buttonClick={buttonClick}
       />
       <Input 
         setter={setMessage} 
@@ -42,6 +44,7 @@ function BoxContainer () {
         label={"Messages"}
         maxLength={100}
         imageFile={imageFile}
+        buttonClick={buttonClick}
 
       />
       <Input 
@@ -50,10 +53,15 @@ function BoxContainer () {
         label={"From"}
         maxLength={100}
         imageFile={imageFile}
+        buttonClick={buttonClick}
       />
       <Button
         canvasRef={canvasRef}
         imageFile={imageFile}
+        setButtonClick={setButtonClick}
+        dear={dear}
+        message={message}
+        from={from}
       />
     </div>
   )

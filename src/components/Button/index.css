@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
   border-top: 2px solid #F0F0FA;
   padding-top: 30px;

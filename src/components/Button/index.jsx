@@ -4,11 +4,23 @@ import './index.css'
 
 function Button (props) {
 
-  const { canvasRef , imageFile } = props
+  const { 
+    canvasRef , 
+    imageFile , 
+    setButtonClick,
+    dear,
+    message,
+    from,
+  } = props
 
   const [errorValidation,setErrorValidation] = useState("")
 
   const handleDownload = () => {
+    setButtonClick(true)
+    if (dear==""||message===""||from==="") {
+      setErrorValidation("Harap Isi Semua Form")
+      return
+    }
     if (!imageFile) {
       setErrorValidation("Please Upload file")
       return
@@ -28,7 +40,7 @@ function Button (props) {
       </button>
       {
         errorValidation && 
-        <span style={{color:"red",top : 40,position : "absolute",fontSize : 14}}>
+        <span style={{color:"red",fontSize : 14}}>
           {errorValidation}
         </span>
       }
